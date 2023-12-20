@@ -3,9 +3,12 @@
 #pragma comment(lib, "winmm.lib")
 
 #include "main.h"										
+#include "Camera.h"
 #include "SimplexNoise.h"
+
 #include "CTerrain.h"
-										
+
+CCamera g_Camera;										
 
 bool  g_bFullScreen = TRUE;								
 HWND  g_hWnd;											
@@ -25,7 +28,11 @@ void Init(HWND hWnd)
 	g_hWnd = hWnd;										
 	GetClientRect(g_hWnd, &g_rRect);					
 	InitializeOpenGL(g_rRect.right, g_rRect.bottom);	
+
+	g_Camera.PositionCamera(1.5, 6.5f, -8.f,   0, 1.5f, 0,   0, 1, 0);
 }
+
+
 
 bool AnimateNextFrame(int desiredFrameRate)
 {
@@ -92,7 +99,10 @@ WPARAM MainLoop()
 		else											
 		{
 			if(AnimateNextFrame(4000))					
-			{		
+			{
+				if(is_focus)
+					g_Camera.Update();						
+
 				RenderScene();							
 			}
 			else
@@ -206,7 +216,7 @@ void Build()
 	computeNormals();
 }
 
-void Draw3DSGrid()
+void Draw3DSGrid(CCamera camera)
 {
 	if (GetKeyState(VK_F3) & 0x80) {
 		scale -= 0.001;
@@ -302,7 +312,9 @@ void RenderScene()
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);	
 	glLoadIdentity();									
 	
-	Draw3DSGrid();
+	g_Camera.Look();
+
+	Draw3DSGrid(g_Camera);
 	
 	SwapBuffers(g_hDC);	
 }
