@@ -1,0 +1,12 @@
+﻿  Main.cpp
+D:\Andrey\4 course\Віртульна реальність\Lab_1\TEST_TERRAIN\Main.cpp(73,30): warning C4244: 'argument': conversion from 'GLdouble' to 'float', possible loss of data
+D:\Andrey\4 course\Віртульна реальність\Lab_1\TEST_TERRAIN\Main.cpp(73,24): warning C4244: 'argument': conversion from 'GLdouble' to 'float', possible loss of data
+D:\Andrey\4 course\Віртульна реальність\Lab_1\TEST_TERRAIN\Main.cpp(73,18): warning C4244: 'argument': conversion from 'GLdouble' to 'float', possible loss of data
+D:\Andrey\4 course\Віртульна реальність\Lab_1\TEST_TERRAIN\Main.cpp(183,17): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+D:\Andrey\4 course\Віртульна реальність\Lab_1\TEST_TERRAIN\Main.cpp(203,111): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\Andrey\4 course\Віртульна реальність\Lab_1\TEST_TERRAIN\Main.cpp(203,92): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\Andrey\4 course\Віртульна реальність\Lab_1\TEST_TERRAIN\Main.cpp(212,17): warning C4305: '-=': truncation from 'double' to 'float'
+D:\Andrey\4 course\Віртульна реальність\Lab_1\TEST_TERRAIN\Main.cpp(217,17): warning C4305: '+=': truncation from 'double' to 'float'
+D:\Andrey\4 course\Віртульна реальність\Lab_1\TEST_TERRAIN\Main.cpp(222,21): warning C4305: '-=': truncation from 'double' to 'float'
+D:\Andrey\4 course\Віртульна реальність\Lab_1\TEST_TERRAIN\Main.cpp(227,21): warning C4305: '+=': truncation from 'double' to 'float'
+  TimeBasedMovement.vcxproj -> D:\Andrey\4 course\Віртульна реальність\Lab_1\TEST_TERRAIN\Release\TimeBasedMovement.exe
